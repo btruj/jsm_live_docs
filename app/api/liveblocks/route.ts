@@ -4,12 +4,10 @@ import { redirect } from 'next/navigation';
 import { liveblocks } from '@/lib/liveblocks';
 import { getUserColor } from '@/lib/utils';
 
-export async function POST(request: Request) {
+export async function POST() {
   const clerkUser = await currentUser();
 
   if (!clerkUser) redirect('/sign-in');
-
-  const { id, firstName, lastName, emailAddresses, imageUrl } = clerkUser;
 
   const user = {
     id: clerkUser.id,
