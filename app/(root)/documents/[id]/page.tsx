@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation';
 import { getDocument } from '@/lib/actions/room.actions';
 import { getClerkUsers } from '@/lib/actions/user.actions';
 
-import  CollaborativeRoom  from '@/components/CollaborativeRoom';
+import  {CollaborativeRoom}  from '@/components/CollaborativeRoom';
 
 const Document = async ({ params: { id } }: SearchParamProps) => {
   const clerkUser = await currentUser();
