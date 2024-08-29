@@ -10,6 +10,7 @@ import { updateDocument } from '@/lib/actions/room.actions';
 import { Editor } from './ui/editor/Editor';
 import  Header  from '@/components/Header';
 import  Loader  from '@/components/Loader';
+import ShareModal from './ShareModal';
 
 import  ActiveCollaborators  from './ActiveCollaborators';
 // import { ShareModal } from './ShareModal';
@@ -123,12 +124,12 @@ export function CollaborativeRoom({
             {/* Collaborators & Actions */}
             <div className="flex w-[150px] justify-end gap-2 sm:gap-3 ">
               <ActiveCollaborators />
-              {/* <ShareModal
+              <ShareModal
                 roomId={roomId}
                 collaborators={users}
                 creatorId={roomMetadata.creatorId}
                 currentUserType={currentUserType}
-              /> */}
+              />
               <SignedIn>
                 <UserButton />
               </SignedIn>
