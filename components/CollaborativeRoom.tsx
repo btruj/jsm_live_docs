@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { updateDocument } from '@/lib/actions/room.actions';
 
-import { Editor } from './ui/editor/Editor';
+import { Editor } from './editor/Editor';
 import  Header  from '@/components/Header';
 import  Loader  from '@/components/Loader';
 import ShareModal from './ShareModal';
